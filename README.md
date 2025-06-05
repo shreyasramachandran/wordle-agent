@@ -61,3 +61,23 @@ After 50,000 training episodes:
 
 ## 🧪 How to Run
 - use the jupyter notebook provided
+
+---
+
+## 🧩 Open Problems
+
+- ❗ **Scaling to Large Vocabulary**: The model struggles to converge when trained on a large vocabulary set, likely due to increased action space complexity and sparse reward signals.
+- ❗ **Delayed Rewards**: If the rewards are given only at the end of the game, training is slow and unstable in early episodes.
+- ❗ **Fixed Vocabulary Distribution**: The model explicitly learns a probability distribution over a fixed vocabulary, unlike language models which generalize and adapt via weight updates to in-context tasks. This limits flexibility and sample efficiency.
+
+---
+
+## 🔭 Next Steps
+
+- 🔍 **Improve Convergence on Large Vocabularies**: Explore curriculum learning, better initialization, entropy regularization or hierarchical action spaces to improve stability with larger vocab sizes.
+- 🧪 **Directly Fine-Tune an LLM**: Investigate how a pretrained LLM (e.g., GPT-style) could be fine-tuned or prompted to adapt to Wordle-style tasks using policy gradient.
+- 🎯 **Explore Intermediate Rewards**: Add more granular reward shaping to encourage learning partial structure (e.g., rewarding information gain, entropy reduction).
+- 🧠 **Compare Against Supervised and Search-Based Agents**: Benchmark this reinforcement learning approach against supervised learning baselines and tree-search-based agents (e.g., minimax-style guessers with entropy-based heuristics).
+
+---
+
